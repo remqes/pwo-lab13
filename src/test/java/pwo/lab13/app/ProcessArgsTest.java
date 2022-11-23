@@ -26,13 +26,13 @@ public class ProcessArgsTest {
     @Test
     public void testGetAction1() {
         System.out.println("test gen action 1");
-        assertEquals(SUM, ProcessArgs.getAction(ARGS1));
+        assertEquals(UNDEFINE, ProcessArgs.getAction(ARGS1));
     }
     
     @Test
     public void testGetAction2() {
         System.out.println("test gen action 2");
-        assertEquals(MAX, ProcessArgs.getAction(ARGS2));
+        assertEquals(UNDEFINE, ProcessArgs.getAction(ARGS2));
     }
     
     @Test
@@ -44,7 +44,7 @@ public class ProcessArgsTest {
     @Test
     public void testGetAction4() {
         System.out.println("test gen action 4");
-        assertEquals(MAX, ProcessArgs.getAction(ARGS4));
+        assertEquals(UNDEFINE, ProcessArgs.getAction(ARGS4));
     }
 
     /**

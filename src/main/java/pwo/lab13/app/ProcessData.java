@@ -18,7 +18,14 @@ public class ProcessData {
     */
     
     private Double sum(double [] numbers) {
-        throw new IllegalStateException("Not implemented yet");
+        if (numbers.length == 0)
+            return null;
+        
+        double sum = 0;
+        for (double number : numbers)
+            sum += number;
+        
+        return sum;
     }
     
     /*
@@ -27,7 +34,16 @@ public class ProcessData {
     */
     
     private Double max(double [] numbers) {
-        throw new IllegalStateException("Not implemented yet");
+        if (numbers.length == 0)
+            return null;
+        
+        double max = numbers[0];
+        
+        for (double num : numbers) 
+            if (num > max)
+                max = num;
+        
+        return max;
     }
     
 }

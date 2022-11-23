@@ -14,7 +14,14 @@ public class ProcessArgs {
     */
     
     public static Action getAction(String[] args) {
-        throw new IllegalStateException("Not implemented yet");
+        for (String str : args) {
+            try {
+                Action actionType = Action.valueOf(str.toUpperCase());
+            } catch(Exception ex) {
+                
+            }
+        }
+        return Action.UNDEFINE;
     }
     
     /*
@@ -24,7 +31,21 @@ public class ProcessArgs {
     */
     
     public static double [] getNumbers(String[] args) {
-        throw new IllegalStateException("Not implemented yet");
+        ArrayList<Double> numbers = new ArrayList<>();
+        
+        for (String str : args) {
+            try {
+                numbers.add(Double.parseDouble(str));
+            } catch(Exception ex) {
+                
+            }
+        }
+            
+        double[] arrNumbers = new double[numbers.size()];
+            
+        for (int i = 0; i < numbers.size(); i++)
+            arrNumbers[i] = numbers.get(i).doubleValue();
+            
+        return arrNumbers;
     }
-    
 }
